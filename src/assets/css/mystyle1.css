@@ -1,0 +1,96 @@
+
+.mydiv {
+    border: 10px solid #e46565; /* 테두리  */
+    margin-bottom: 10px;          /* 아래쪽 여백  */ 
+    padding : 10px;               /* 안쪽(4방향) 여백 */
+}
+
+.container{  /* <div class="container"> */
+    width : 800px;
+    padding : 30px;
+    border : 3px solid #6eeeff;
+    
+
+}
+
+.lbl1{
+    width : 100px;
+    display : inline-block;
+}
+
+.mydiv1{
+    margin-bottom: 5px;
+}
+
+*{
+    box-sizing: border-box; /* 기본값은 content-box */
+}
+    
+
+
+.container1 {  
+    width:100%;
+}
+
+
+header {  /* <header>  */
+    background-color: #8ed1f8;
+    color: rgb(46, 46, 46);
+    padding: 20px;
+    text-align: center;
+    
+
+}
+
+nav{
+    float: left;
+    background-color: #add4f5;
+    width:20%;
+    height: 400px;
+    padding: 10px;
+}
+
+article{
+    float: left;
+    width:70%;
+    background-color: #96f5d5;
+    height: 400px;
+    padding: 10px;
+}
+
+aside{
+    float: left;
+    width:10%;
+    background-color: #53b674;
+    height: 400px;
+    padding: 10px;
+}
+
+footer{
+    background-color: #9d87d8;
+    text-align: center;
+    padding: 20px;
+}
+
+section::after{
+    content: "";
+    clear : both;
+    display : block;
+}
+
+ul{
+    list-style-type: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+table{
+    width: 100%;
+    border-collapse: collapse;            
+}
+
+tbody{
+    text-align: center;
+}
