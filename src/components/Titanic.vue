@@ -9,14 +9,14 @@
             </thead>
 
             <tbody>
-                <tr v-for="tmp1 in sur" v-bind:key="tmp1">                    
-                    <td>{{ tmp1[0] }}</td>                  
-                    <td>{{ tmp1[1] }}</td>
-                    <td>{{ tmp1[2] }}</td>
-                    <td>{{ tmp1[3] }}</td>
-                    <td>{{ tmp1[4] }}</td>
-                    <td>{{ tmp1[5] }}</td>
-                    <td>{{ tmp1[6] }}</td>
+                <tr v-for="tmp in sur" v-bind:key="tmp">                    
+                    <td>{{ tmp[0] }}</td>                  
+                    <td>{{ tmp[1] }}</td>
+                    <td>{{ tmp[2] }}</td>
+                    <td>{{ tmp[3] }}</td>
+                    <td>{{ tmp[4] }}</td>
+                    <td>{{ tmp[5] }}</td>
+                    <td>{{ tmp[6] }}</td>
                 </tr>
             </tbody>
         </table>
@@ -32,14 +32,14 @@
             </thead>
 
             <tbody>
-                <tr v-for="tmp2 in notsur" v-bind:key="tmp2">                    
-                    <td>{{ tmp2[0] }}</td>                  
-                    <td>{{ tmp2[1] }}</td>
-                    <td>{{ tmp2[2] }}</td>
-                    <td>{{ tmp2[3] }}</td>
-                    <td>{{ tmp2[4] }}</td>
-                    <td>{{ tmp2[5] }}</td>
-                    <td>{{ tmp2[6] }}</td>
+                <tr v-for="tmp in notsur" v-bind:key="tmp">                    
+                    <td>{{ tmp[0] }}</td>                  
+                    <td>{{ tmp[1] }}</td>
+                    <td>{{ tmp[2] }}</td>
+                    <td>{{ tmp[3] }}</td>
+                    <td>{{ tmp[4] }}</td>
+                    <td>{{ tmp[5] }}</td>
+                    <td>{{ tmp[6] }}</td>
                 </tr>
             </tbody>
         </table>
