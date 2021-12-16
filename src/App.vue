@@ -10,6 +10,12 @@
       <router-link to="/join">회원가입</router-link>/
       <router-link to="/form">폼</router-link>/
       <router-link to="/board">게시판</router-link>/
+      <router-link to="/iris">Iris</router-link>/
+      <router-link to="/iris1">Iris1</router-link>/
+      <router-link to="/exam10">Exam10</router-link>/
+      <router-link to="/exam21">Exam21</router-link>/
+      <router-link to="/admin">Admin</router-link>/
+      <router-link to="/titanic">Titanic</router-link>/
 
     </div>
     <router-view></router-view>
