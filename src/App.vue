@@ -16,6 +16,9 @@
       <router-link to="/exam21">Exam21</router-link>/
       <router-link to="/admin">Admin</router-link>/
       <router-link to="/titanic">Titanic</router-link>/
+      <router-link to="/table1">table1</router-link>/
+      <router-link to="/table2">table2</router-link>/
+      <router-link to="/table3">table3</router-link>/
 
     </div>
     <router-view></router-view>

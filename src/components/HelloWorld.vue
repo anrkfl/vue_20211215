@@ -24,6 +24,7 @@
                     <li><a href="storage1.html">저장소1</a></li>
                     <li><a href="dtable.html">데이터테이블</a></li>
                     <li><a href="chart.html">차트</a></li>
+                    <li><a href="table1.html">Table1</a></li>
                 </ul>
                    
             </nav>

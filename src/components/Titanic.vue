@@ -1,23 +1,25 @@
 <template>
     <div class="container">
-         <h3>생존자</h3>
+         
         <table border="1">
             <thead >
-                <tr>                    
+                <h3>생존자</h3>
+                <tr>  
+                    <!-- {name: 'ticket class', type: 'number'} -->
                     <th v-for="tmp in fields" v-bind:key="tmp">{{ tmp.name }}</th>
                 </tr>
             </thead>
 
             <tbody>
+                <!-- [3, 'female', 9, 1, 1, 15.2458, 'Cherbourg'] -->
                 <tr v-for="tmp in sur" v-bind:key="tmp">                    
-                    <td>{{ tmp[0] }}</td>                  
-                    <td>{{ tmp[1] }}</td>
-                    <td>{{ tmp[2] }}</td>
-                    <td>{{ tmp[3] }}</td>
-                    <td>{{ tmp[4] }}</td>
-                    <td>{{ tmp[5] }}</td>
-                    <td>{{ tmp[6] }}</td>
+                    <td v-for="tmp1 in 7" v-bind:key="tmp1">{{ tmp[tmp1-1] }}</td>                    
                 </tr>
+
+                <!-- <h3>사망자</h3>        
+                <tr v-for="tmp in notsur" v-bind:key="tmp">                    
+                    <td v-for="tmp1 in 7" v-bind:key="tmp1">{{ tmp[tmp1-1] }}</td>                    
+                </tr>                 -->
             </tbody>
         </table>
 
@@ -33,13 +35,7 @@
 
             <tbody>
                 <tr v-for="tmp in notsur" v-bind:key="tmp">                    
-                    <td>{{ tmp[0] }}</td>                  
-                    <td>{{ tmp[1] }}</td>
-                    <td>{{ tmp[2] }}</td>
-                    <td>{{ tmp[3] }}</td>
-                    <td>{{ tmp[4] }}</td>
-                    <td>{{ tmp[5] }}</td>
-                    <td>{{ tmp[6] }}</td>
+                    <td v-for="tmp1 in 7" v-bind:key="tmp1">{{ tmp[tmp1-1] }}</td>                    
                 </tr>
             </tbody>
         </table>
@@ -47,22 +43,19 @@
     </div>
 </template>
 
-<script>
-    // 백엔드에서 값 받기
+<script>    
     import axios from 'axios';
     export default {
         created(){
             this.handleData();
-
         },
+
         data(){
             return{
                 fields : [],
                 sur    : [],
-                notsur : [],
-             
+                notsur : [],             
             }
-
         },
 
         methods:{
@@ -77,8 +70,12 @@
                 if(response.status ===200){
                     this.fields = response.data.metadata.fields;
                     this.sur = response.data.data.survived;
-                    this.notsur = response.data.data.did_not_survive;                    
-                }
+                    this.notsur = response.data.data.did_not_survive; 
+
+                    console.log(this.fields);
+                    console.log(this.sur);                   
+                    console.log(this.notsur);                   
+                }                
             }
         }
     }
