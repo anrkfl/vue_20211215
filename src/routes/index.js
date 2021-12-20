@@ -18,6 +18,11 @@ import Titanic from '@/components/Titanic.vue';
 import Table1 from '@/components/Table1.vue';
 import Table2 from '@/components/Table2.vue';
 import Table3 from '@/components/Table3.vue';
+import CompProp from '@/components/CompProp.vue';
+import Admin1 from '@/components/Admin1.vue';
+import CompSlot from '@/components/CompSlot.vue';
+//import MyPage from '@/components/MyPage.vue';
+
 
 // 2. url과 함께 사용할 컴포넌트 연결 
 const routes = [
@@ -41,6 +46,11 @@ const routes = [
     { path:'/table1', name:"Table1", component:Table1 },
     { path:'/table2', name:"Table2", component:Table2 },
     { path:'/table3', name:"Table3", component:Table3 },
+    { path:'/compprop', name:"CompProp", component:CompProp },
+    { path:'/admin1', name:"Admin1", component:Admin1 },
+    { path:'/compslot', name:"CompSlot", component:CompSlot },
+    //{ path:'/pypage', name:"MyPage", component:MyPage },
+    
 ];
   
 const router = createRouter({

@@ -67,7 +67,7 @@
     export default {
         data() {
             return {
-                menu     : 2,
+                menu     : 1,
                 count    : 5,
                 code     : [],
                 name     : [],

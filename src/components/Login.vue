@@ -2,9 +2,25 @@
     <div class="container">
         <h3>로그인</h3>
 
+        <el-form  label-width="120px">
 
+            <el-form-item label="아이디">
+                <el-input size="small" v-model="member.userid" ref="userid"></el-input>
+            </el-form-item>
+
+            <el-form-item label="암호">
+                <el-input size="small" v-model="member.userpw" ref="userpw" show-password></el-input>
+            </el-form-item>
+
+            <el-form-item label="">
+                <el-button size="small" @click="handleLogin">로그인</el-button>
+                <el-button size="small" @click="handleLogin">회원가입</el-button>
+            </el-form-item>
         
-        <div class="mydiv1">
+            
+            
+
+        <!-- <div class="mydiv1">
             <label class="lbl1">아이디</label>
             <input type="text" v-model="member.userid" ref="userid" placeholder="아이디" />     
         </div>
@@ -31,8 +47,8 @@
             </router-link>
             
             <br />
-        </div>  
-
+        </div>   -->
+        </el-form>
             
 
     </div>

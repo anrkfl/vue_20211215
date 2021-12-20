@@ -1,6 +1,59 @@
 <template>
     <div class="container">
         <h3>회원가입</h3>
+       
+        <el-form  label-width="120px">
+            
+            <el-row>
+            <el-col :span="18">
+
+            <el-form-item label="아이디">
+                <el-input v-model="userid"></el-input>
+                <el-button >로그인</el-button>
+            </el-form-item>
+
+             <el-form-item label="암호">
+                <el-input v-model="userpw" show-password></el-input>
+            </el-form-item>
+
+             <el-form-item label="암호확인">
+                <el-input v-model="userpw1" show-password></el-input>
+            </el-form-item>
+
+            <el-form-item label="이름">
+                <el-input v-model="userid"></el-input>
+            </el-form-item>
+
+
+            </el-col>
+            </el-row>
+
+
+
+            <el-form-item label="이메일">
+                 <el-row>
+                    <el-col :span="8">  
+                        <el-input v-model="useremail"></el-input>
+                    </el-col>
+                    <el-col :span="1">@</el-col>
+                    <el-col :span="8">
+                        <el-select v-model="value">
+                            <el-option v-for="item in options" 
+                                    :key="item.value"
+                                    :label="item.label"  
+                                    :value="item.value" >
+                            </el-option>
+                        </el-select>  
+                    </el-col>
+                </el-row>
+
+            </el-form-item>
+
+            <el-form-item>            
+            <el-checkbox  v-model="chk1" label="약관동의" border></el-checkbox>
+            </el-form-item>
+
+
         <div class="mydiv1">
             <label class="lbl1">아이디</label>
             <input type="text"  placeholder="아이디" v-model="userid" ref="userid" />
@@ -59,10 +112,15 @@
             <br />
         </div>
 
+        </el-form>
+
     </div>
+
+    
 </template>
 
 <script>
+
     export default {
         data(){
             return{
@@ -72,6 +130,15 @@
                 username  : '',
                 useremail : '',
                 chk1      : false,
+                options   : 
+                [
+                    {value: 'Option1', label: 'naver.com'},
+                    {value: 'Option2', label: 'daum.com'},
+                    {value: 'Option3', label: 'gmail.com'},                    
+                ],
+                //[{},{},{},{}]
+
+                value:'선택하세요',
             }
         },
 
