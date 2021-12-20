@@ -8,20 +8,20 @@
             <el-col :span="18">
 
             <el-form-item label="아이디">
-                <el-input v-model="userid"></el-input>
-                <el-button >로그인</el-button>
+                <el-input v-model="userid" ref="userid"></el-input>
+                <el-button size="small">중복확인</el-button>
             </el-form-item>
 
              <el-form-item label="암호">
-                <el-input v-model="userpw" show-password></el-input>
+                <el-input v-model="userpw" show-password ref="userpw"></el-input>
             </el-form-item>
 
              <el-form-item label="암호확인">
-                <el-input v-model="userpw1" show-password></el-input>
+                <el-input v-model="userpw1" show-password ref="userpw1"></el-input>
             </el-form-item>
 
             <el-form-item label="이름">
-                <el-input v-model="userid"></el-input>
+                <el-input v-model="username" ref="username"></el-input>
             </el-form-item>
 
 
@@ -31,9 +31,9 @@
 
 
             <el-form-item label="이메일">
-                 <el-row>
+                <el-row>
                     <el-col :span="8">  
-                        <el-input v-model="useremail"></el-input>
+                        <el-input v-model="useremail" ref="useremail"></el-input>
                     </el-col>
                     <el-col :span="1">@</el-col>
                     <el-col :span="8">
@@ -46,7 +46,6 @@
                         </el-select>  
                     </el-col>
                 </el-row>
-
             </el-form-item>
 
             <el-form-item>            
@@ -54,7 +53,13 @@
             </el-form-item>
 
 
-        <div class="mydiv1">
+            <el-form-item label="">                
+                <el-button size="small" @click="handleLogin">회원가입</el-button>
+                <el-button size="small" @click="handleLogin">로그인</el-button>
+            </el-form-item>
+
+
+        <!-- <div class="mydiv1">
             <label class="lbl1">아이디</label>
             <input type="text"  placeholder="아이디" v-model="userid" ref="userid" />
             <input type="button" value="중복확인" />
@@ -110,7 +115,7 @@
             </router-link>
             
             <br />
-        </div>
+        </div> -->
 
         </el-form>
 
