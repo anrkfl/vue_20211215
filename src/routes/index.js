@@ -22,6 +22,8 @@ import CompProp from '@/components/CompProp.vue';
 import Admin1 from '@/components/Admin1.vue';
 import CompSlot from '@/components/CompSlot.vue';
 //import MyPage from '@/components/MyPage.vue';
+import Upload1 from '@/components/Upload1.vue'; 
+import CompSlotScope from '@/components/CompSlotScope.vue';
 
 
 // 2. url과 함께 사용할 컴포넌트 연결 
@@ -50,6 +52,8 @@ const routes = [
     { path:'/admin1', name:"Admin1", component:Admin1 },
     { path:'/compslot', name:"CompSlot", component:CompSlot },
     //{ path:'/pypage', name:"MyPage", component:MyPage },
+    { path:'/upload1', name:"Upload1", component:Upload1 },
+    { path:'/compslotscope', name:"CompSlotScope", component:CompSlotScope },
     
 ];
   

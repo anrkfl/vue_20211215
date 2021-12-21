@@ -1,8 +1,11 @@
 <template>
-    <div class="container">
+    <div >
         <h3>로그인</h3>
 
         <el-form  label-width="120px">
+
+            <el-row>
+            <el-col :span="12">
 
             <el-form-item label="아이디">
                 <el-input size="small" v-model="member.userid" ref="userid"></el-input>
@@ -16,6 +19,9 @@
                 <el-button size="small" @click="handleLogin">로그인</el-button>
                 <el-button size="small" @click="handleLogin">회원가입</el-button>
             </el-form-item>
+
+            </el-col>
+            </el-row>
         
             
             

@@ -5,8 +5,9 @@
 
             <input type="button" @click="addCount" value="항목추가" />
             <input type="button" @click="subCount" value="항목삭제" />
+          
 
-           
+        
 
             <table>
                 <tbody>
@@ -33,6 +34,7 @@
                 name     : [],
                 price    : [],
                 quantity : [],
+                
 
             }
          },

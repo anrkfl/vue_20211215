@@ -1,11 +1,11 @@
 <template>
-    <div class="container">
+    <div >
         <h3>회원가입</h3>
        
         <el-form  label-width="120px">
             
             <el-row>
-            <el-col :span="18">
+            <el-col :span="12">
 
             <el-form-item label="아이디">
                 <el-input v-model="userid" ref="userid"></el-input>
@@ -32,7 +32,7 @@
 
             <el-form-item label="이메일">
                 <el-row>
-                    <el-col :span="8">  
+                    <el-col :span="6">  
                         <el-input v-model="useremail" ref="useremail"></el-input>
                     </el-col>
                     <el-col :span="1">@</el-col>
