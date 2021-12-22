@@ -1,11 +1,13 @@
 <template>
     <div >
         <h3>회원가입</h3>
-       
+        
         <el-form  label-width="120px">
+
             
-            <el-row>
-            <el-col :span="12">
+            
+            <el-row :gutter="20"  >
+            <el-col :span="12"  >
 
             <el-form-item label="아이디">
                 <el-input v-model="userid" ref="userid"></el-input>
@@ -32,7 +34,7 @@
 
             <el-form-item label="이메일">
                 <el-row>
-                    <el-col :span="6">  
+                    <el-col :span="4">  
                         <el-input v-model="useremail" ref="useremail"></el-input>
                     </el-col>
                     <el-col :span="1">@</el-col>
@@ -56,70 +58,17 @@
             <el-form-item label="">                
                 <el-button size="small" @click="handleLogin">회원가입</el-button>
                 <el-button size="small" @click="handleLogin">로그인</el-button>
-            </el-form-item>
-
-
-        <!-- <div class="mydiv1">
-            <label class="lbl1">아이디</label>
-            <input type="text"  placeholder="아이디" v-model="userid" ref="userid" />
-            <input type="button" value="중복확인" />
-        </div>
-
-        <div class="mydiv1">
-            <label class="lbl1">암호</label>
-            <input type="password" placeholder="암호" v-model="userpw" ref="userpw" />
-        </div>
-
-        <div class="mydiv1">
-            <label class="lbl1">암호확인</label>
-            <input type="password" placeholder="암호확인" v-model="userpw1" ref="userpw1" />
-        </div>
-
-        <div class="mydiv1">
-            <label class="lbl1">이름</label>
-            <input type="text" placeholder="이름" v-model="username" ref="username" />
-        </div>
-
-        
-        <div class="mydiv1">
-            <label class="lbl1">이메일</label>
-            <input type="text" placeholder="이메일" v-model="useremail" ref="useremail" />
-            <label>@</label>
-            <select>
-                <option>naver.com</option>
-                <option>daum.net</option>
-                <option>gmail.com</option>
-            </select>
-        </div>
-
-        <div class="mydiv1">
-            <label class="lbl1"></label>
-            <input type="checkbox"  v-model="chk1" />
-            <label>약관동의</label>
-        </div>
-        
-        <div class="mydiv1">
-            <label class="lbl1"></label>
-            <input type="button" value="회원가입"  @click="handleLogin" />
-            
-            <router-link to="/login">
-                <input type="button" value="로그인" />
-            </router-link>
-        </div>
-        <hr />
-
-        <div class="mydiv1">
-            <label class="lbl1"></label>
-            <router-link to="/">
-                <input type="button" value="매인으로" />
-            </router-link>
-            
-            <br />
-        </div> -->
+            </el-form-item>       
 
         </el-form>
 
     </div>
+
+    <el-row :gutter="20">
+    <el-col :span="18" :offset="3"
+      ><div class="grid-content bg-purple"></div
+    ></el-col>
+  </el-row>
 
     
 </template>
@@ -185,5 +134,17 @@
 </script>
 
 <style scoped>
+
+
+.bg-purple {
+  background: #d3dce6;
+}
+.bg-purple-light {
+  background: #e5e9f2;
+}
+.grid-content {
+  border-radius: 4px;
+  min-height: 36px;
+}
 
 </style>

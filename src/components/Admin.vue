@@ -1,5 +1,5 @@
 <template>
-    <div class="container">
+    <div >
         <h3>Admin</h3>
         <input type="button" @click="changeMenu(1)" value="물품등록" />
         <input type="button" @click="changeMenu(2)" value="물품관리" />

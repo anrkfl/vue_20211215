@@ -1,5 +1,5 @@
 <template>
-    <div class="container">
+    <div >
         <h3>Iris 실습</h3>
         <table border="1">
             <thead >

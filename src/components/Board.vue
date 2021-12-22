@@ -1,5 +1,5 @@
 <template>
-    <div class="container">
+    <div >
         <h3>게시판</h3>
 
         <table border="1">

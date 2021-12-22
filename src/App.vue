@@ -1,6 +1,8 @@
 <template>
   <div>    
-    <el-container>
+
+     <!-- 고객용 페이지 레이아웃 -->
+    <el-container v-if="admin === false">
       <el-header>
         <el-menu :default-active="defaultActive"
             class="el-menu-demo"
@@ -16,7 +18,7 @@
             <el-menu-item index="300">회원가입</el-menu-item>
             <el-menu-item index="400">마이페이지</el-menu-item>
 
-            <!-- <el-sub-menu index="2">
+            <el-sub-menu index="2">
               <template #title>Workspace</template>
               <el-menu-item index="2-1">item one</el-menu-item>
               <el-menu-item index="2-2">item two</el-menu-item>
@@ -30,7 +32,7 @@
             </el-sub-menu>
 
               <el-menu-item index="3" disabled>Info</el-menu-item>
-              <el-menu-item index="4">Orders</el-menu-item> -->
+              <el-menu-item index="4">관리자</el-menu-item>
             
             </el-menu>
                 
@@ -47,6 +49,13 @@
           <el-footer>Footer</el-footer>
         </el-container>
       </el-container>
+    </el-container>
+
+    <!-- 관리자 페이지 -->
+    <el-container v-else-if="admin === true">
+      <el-header>Header</el-header>
+      <el-main><router-view></router-view></el-main>
+      <el-footer>Footer</el-footer>
     </el-container>
 
 
@@ -75,11 +84,6 @@
           <router-link to="/compslot">CompSlot</router-link>/
 
         </div>
-        
-        
-        
-
-
         <hr />
         <h3 class="container">footer</h3> -->
   </div>
@@ -91,25 +95,48 @@
 <script>
 
 export default {
+
+   //f5 수행시 실행( redux === store === vuex )
+  created(){
+    this.handleAdmin();
+    
+  },
+  
   data(){
     return{
-      defaultActive:'1',
+      defaultActive:'100',
+      admin : false ,
     }
   },
   methods: {
+
+    handleAdmin(){
+      console.log(window.location.pathname);
+    if(window.location.pathname === '/admin1' ||
+       window.location.pathname === '/admin' ){
+      this.admin = true;
+    }
+    else{
+      this.admin = false;
+    }
+    },
     handleSelect(idx){
       console.log('App.vue -> handleSelect',idx)
        if(idx ==='100'){
         this.$router.push({path:'/'})
       }
-      if(idx ==='200'){
+      else if(idx ==='200'){
         this.$router.push({path:'/login'})
       }
-      if(idx ==='300'){
+      else if(idx ==='300'){
         this.$router.push({path:'/join'})
       }
-      if(idx ==='400'){
+      else if(idx ==='400'){
         this.$router.push({path:'/mypage'})
+      }
+      else if(idx ==='4'){
+        //a 태그로 페이지 전환
+        window.location.href="/admin1";
       }
 
 

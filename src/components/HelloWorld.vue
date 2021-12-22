@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div >
     <h3>메인</h3>
 
     

@@ -1,5 +1,5 @@
 <template>
-    <div class="container">
+    <div >
          <h3>일별 박스 오피스</h3>
         <table border="1">
             <thead >

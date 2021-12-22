@@ -1,5 +1,5 @@
 <template>
-    <div class="container">
+    <div >
         <h3>주문목록</h3>
         <table border="1">
             <thead>

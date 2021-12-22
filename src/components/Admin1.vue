@@ -1,5 +1,5 @@
 <template>
-    <div class="container">
+    <div >
         <h3>관리자 페이지 : 컴포넌트 이용</h3>
 
         <div>

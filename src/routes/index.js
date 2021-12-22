@@ -24,6 +24,11 @@ import CompSlot from '@/components/CompSlot.vue';
 //import MyPage from '@/components/MyPage.vue';
 import Upload1 from '@/components/Upload1.vue'; 
 import CompSlotScope from '@/components/CompSlotScope.vue';
+import Shop from '@/components/Shop.vue';
+import Order from '@/components/Order.vue';
+import OrderAction from '@/components/OrderAction.vue';
+import Board1 from '@/components/Board1.vue';
+import Board1One from '@/components/Board1One.vue';
 
 
 // 2. url과 함께 사용할 컴포넌트 연결 
@@ -54,6 +59,11 @@ const routes = [
     //{ path:'/pypage', name:"MyPage", component:MyPage },
     { path:'/upload1', name:"Upload1", component:Upload1 },
     { path:'/compslotscope', name:"CompSlotScope", component:CompSlotScope },
+    { path:'/shop', name:"Shop", component:Shop },
+    { path:'/order', name:"Order", component:Order },
+    { path:'/orderaction', name:"OrderAction", component:OrderAction },
+    { path:'/board1', name:"Board1", component:Board1 },
+    { path:'/board1one', name:"Board1One", component:Board1One },
     
 ];
   
