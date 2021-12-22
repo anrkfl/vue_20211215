@@ -1,4 +1,7 @@
 <template>
+    
+
+    
     <div >
         <h3>회원가입</h3>
         
@@ -62,13 +65,13 @@
 
         </el-form>
 
+        
+
     </div>
 
-    <el-row :gutter="20">
-    <el-col :span="18" :offset="3"
-      ><div class="grid-content bg-purple"></div
-    ></el-col>
-  </el-row>
+    
+       
+            
 
     
 </template>
