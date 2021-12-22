@@ -10,7 +10,7 @@
             
             
             <el-row :gutter="20"  >
-            <el-col :span="12"  >
+            <el-col :span="18"  >
 
             <el-form-item label="아이디">
                 <el-input v-model="userid" ref="userid"></el-input>
@@ -21,7 +21,7 @@
                 <el-input v-model="userpw" show-password ref="userpw"></el-input>
             </el-form-item>
 
-             <el-form-item label="암호확인">
+            <el-form-item label="암호확인">
                 <el-input v-model="userpw1" show-password ref="userpw1"></el-input>
             </el-form-item>
 
@@ -35,23 +35,22 @@
 
 
 
-            <el-form-item label="이메일">
-                <el-row>
-                    <el-col :span="4">  
-                        <el-input v-model="useremail" ref="useremail"></el-input>
-                    </el-col>
-                    <el-col :span="1">@</el-col>
-                    <el-col :span="8">
-                        <el-select v-model="value">
-                            <el-option v-for="item in options" 
-                                    :key="item.value"
-                                    :label="item.label"  
-                                    :value="item.value" >
-                            </el-option>
-                        </el-select>  
-                    </el-col>
-                </el-row>
-            </el-form-item>
+            
+            <el-row >
+                <el-col :span="14">
+                    <el-form-item label="이메일">
+                    <el-input v-model="useremail" ref="useremail"></el-input>
+                    </el-form-item>
+                </el-col>                    
+                <el-col :span="4">
+                    <el-select v-model="region" placeholder="선택하세요">
+                        <el-option label="@naver.com" value="A"></el-option>
+                        <el-option label="@daum.net" value="B"></el-option>
+                        <el-option label="@gmail.com" value="C"></el-option>
+                    </el-select>  
+                </el-col>
+            </el-row>
+            
 
             <el-form-item>            
             <el-checkbox  v-model="chk1" label="약관동의" border></el-checkbox>
@@ -70,9 +69,6 @@
     </div>
 
     
-       
-            
-
     
 </template>
 
@@ -87,15 +83,7 @@
                 username  : '',
                 useremail : '',
                 chk1      : false,
-                options   : 
-                [
-                    {value: 'Option1', label: 'naver.com'},
-                    {value: 'Option2', label: 'daum.com'},
-                    {value: 'Option3', label: 'gmail.com'},                    
-                ],
-                //[{},{},{},{}]
-
-                value:'선택하세요',
+                region: '',
             }
         },
 
