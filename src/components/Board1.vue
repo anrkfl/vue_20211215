@@ -9,8 +9,7 @@
             <el-table-column prop="hit" label="조회수" width="180" />            
             <el-table-column prop="regdate" label="날짜" />
         </el-table>
-        <el-pagination layout="prev, pager, next" 
-            @current-change="currentChange" :total="500">
+        <el-pagination layout="prev, pager, next" @current-change="currentChange" :total="500">
         </el-pagination>
 
         
